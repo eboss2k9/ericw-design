@@ -90,71 +90,8 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Contact Form & Newsletter */}
-          <div className="space-y-8">
-            {/* Contact Form */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-luxury-dark">Get a Quote</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <Input placeholder="First Name" />
-                  <Input placeholder="Last Name" />
-                </div>
-                <Input placeholder="Company Name" />
-                <Input placeholder="Email Address" type="email" />
-                <Input placeholder="Phone Number" type="tel" />
-                <Input placeholder="Order Quantity (approx.)" />
-                <Textarea 
-                  placeholder="Tell us about your requirements, preferred products, timeline, and any special customization needs..."
-                  className="min-h-[120px]"
-                />
-                <Button className="w-full">
-                  Submit Quote Request
-                </Button>
-                <p className="text-sm text-muted-foreground">
-                  Our B2B team will respond within 24 hours with a personalized quote.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Newsletter Signup */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-luxury-dark">Newsletter Signup</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  Stay updated with our latest collections, exclusive B2B offers, and industry insights.
-                </p>
-                <div className="flex gap-2">
-                  <Input placeholder="Your email address" type="email" className="flex-1" />
-                  <Button>Subscribe</Button>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <input type="checkbox" className="mt-1" id="newsletter-consent" />
-                  <label htmlFor="newsletter-consent" className="text-sm text-muted-foreground">
-                    I agree to receive marketing communications from Decris Luxury Sportclothing. 
-                    You can unsubscribe at any time.
-                  </label>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Quick Contact */}
-            <Card className="bg-luxury-light">
-              <CardContent className="p-6">
-                <h3 className="font-semibold text-luxury-dark mb-2">Need Immediate Assistance?</h3>
-                <p className="text-muted-foreground mb-4">
-                  For urgent B2B inquiries or large volume orders, contact our dedicated sales team directly.
-                </p>
-                <Button variant="outline" className="w-full">
-                  Call B2B Sales Now
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Contact Information Only */}
+          <div></div>
         </div>
       </div>
     </div>

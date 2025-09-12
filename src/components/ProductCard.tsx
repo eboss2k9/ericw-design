@@ -45,8 +45,16 @@ const ProductCard = ({ product }: ProductCardProps) => {
               ${product.price}
             </span>
             
-            <Button variant="outline" size="sm">
-              View Details
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => {
+                const subject = `Quote Request for ${product.name}`;
+                const body = `Hello,\n\nI would like to request a quote for:\n\nProduct: ${product.name}\nCategory: ${product.category}\nPrice: $${product.price}\n\nPlease provide bulk pricing and availability.\n\nThank you!`;
+                window.location.href = `mailto:chuckwester1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              }}
+            >
+              Get Quote
             </Button>
           </div>
         </div>
