@@ -60,7 +60,7 @@ const Index = () => {
               View Catalog
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="border-white text-black hover:text-black hover:bg-transparent">
               Get B2B Quote
             </Button>
           </div>
@@ -186,7 +186,7 @@ const Index = () => {
             <Button size="lg" variant="secondary" asChild>
               <Link to="/contact">Get Quote</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+            <Button size="lg" variant="outline" className="border-white text-black hover:text-black hover:bg-transparent" asChild>
               <Link to="/about">Learn More</Link>
             </Button>
           </div>
