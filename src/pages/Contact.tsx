@@ -21,9 +21,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="flex justify-center">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-2xl w-full">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center text-luxury-dark">
@@ -90,8 +90,6 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Contact Information Only */}
-          <div></div>
         </div>
       </div>
     </div>
