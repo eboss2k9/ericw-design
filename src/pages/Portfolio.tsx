@@ -36,6 +36,8 @@ import workbenchHomepage from "@/assets/workbench_homepage.jpg";
 import workbenchPartners from "@/assets/workbench_partners.jpg";
 import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
 import ericWarnerHero from "@/assets/eric_warner_hero.jpg";
+import aewVendingInterface from "@/assets/aew_vending_interface.jpg";
+import aewWorkplaceSetup from "@/assets/aew_workplace_setup.jpg";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -108,6 +110,22 @@ const Portfolio = () => {
         socialShares: "2.1M"
       },
       tags: ["AR/VR Design", "Mobile UX", "Brand Experience"],
+      featured: true
+    },
+    {
+      id: "aew-vending",
+      title: "AEW Vending Solutions Platform",
+      client: "AEW Vending",
+      about: "Modernized vending solutions platform for Twin Cities workplaces, featuring smart inventory management and contactless payment systems. Increased workplace satisfaction by 85%.",
+      platform: "Web Application & Mobile",
+      industry: "Workplace Solutions & IoT",
+      images: [aewVendingInterface, aewWorkplaceSetup],
+      impact: {
+        satisfaction: "85%",
+        efficiency: "72%",
+        revenue: "$850K ARR"
+      },
+      tags: ["Workplace UX", "IoT Integration", "Mobile Design"],
       featured: true
     },
     {

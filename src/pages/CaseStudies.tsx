@@ -37,6 +37,9 @@ import uaMenuPopup from "@/assets/ua_menu_popup.png";
 import workbenchHomepage from "@/assets/workbench_homepage.jpg";
 import workbenchPartners from "@/assets/workbench_partners.jpg";
 import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
+import aewHeaderDesign from "@/assets/aew_header_design.png";
+import aewVendingInterface from "@/assets/aew_vending_interface.jpg";
+import aewWorkplaceSetup from "@/assets/aew_workplace_setup.jpg";
 
 const CaseStudies = () => {
   const { id } = useParams();
@@ -401,6 +404,78 @@ const CaseStudies = () => {
       },
       tags: ["Government UX", "Accessibility", "Service Design", "Workflow Optimization"],
       images: [cjamsHeader, cjamsDashboard, cjamsNarrative, cjamsCertificate]
+    },
+    "aew-vending": {
+      title: "AEW Vending Solutions Platform",
+      client: "AEW Vending",
+      duration: "9 months",
+      team: "4 designers, 5 developers, 2 IoT specialists",
+      role: "Lead UX Designer & Product Strategy",
+      challenge: "AEW Vending needed to modernize their workplace vending solutions to compete in the smart office market. Traditional vending machines lacked user engagement, inventory visibility, and modern payment options, resulting in low utilization and customer dissatisfaction.",
+      solution: "Designed a comprehensive smart vending ecosystem that transforms workplace refreshment experiences. Created intuitive interfaces for both customers and facility managers, integrating IoT technology with user-centered design to boost engagement and operational efficiency.",
+      process: [
+        {
+          phase: "Workplace Research",
+          duration: "6 weeks",
+          activities: [
+            "Observed 25+ workplace environments across Twin Cities",
+            "Interviewed facility managers and employees",
+            "Analyzed vending usage patterns and pain points",
+            "Studied competitor smart vending solutions"
+          ]
+        },
+        {
+          phase: "Product Strategy",
+          duration: "4 weeks",
+          activities: [
+            "Developed IoT integration strategy",
+            "Created user journey maps for all stakeholders",
+            "Designed service ecosystem architecture",
+            "Established key performance metrics"
+          ]
+        },
+        {
+          phase: "Interface Design",
+          duration: "16 weeks",
+          activities: [
+            "Designed touchscreen vending interfaces",
+            "Created mobile companion app",
+            "Built management dashboard for facilities",
+            "Developed contactless payment experiences"
+          ]
+        },
+        {
+          phase: "Pilot & Optimization",
+          duration: "12 weeks",
+          activities: [
+            "Deployed pilot program in 15 offices",
+            "Collected user behavior analytics",
+            "Refined interfaces based on real usage",
+            "Scaled successful patterns across platform"
+          ]
+        }
+      ],
+      keyFeatures: [
+        "Smart inventory management with real-time tracking",
+        "Contactless payment via mobile app and NFC",
+        "Personalized product recommendations",
+        "Facility management dashboard with analytics",
+        "Employee wellness program integration"
+      ],
+      results: [
+        { metric: "Employee Satisfaction", before: "2.8/5", after: "4.6/5", improvement: "+64%" },
+        { metric: "Vending Utilization", before: "23%", after: "78%", improvement: "+239%" },
+        { metric: "Operational Efficiency", before: "45%", after: "92%", improvement: "+104%" },
+        { metric: "Payment Success Rate", before: "67%", after: "98%", improvement: "+46%" },
+        { metric: "Client Revenue", before: "$280K/yr", after: "$850K/yr", improvement: "+204%" }
+      ],
+      testimonial: {
+        quote: "Eric's design thinking transformed our traditional vending business into a modern workplace solution. The employee engagement and operational insights we now have are game-changing.",
+        author: "Mark Peterson",
+        role: "CEO, AEW Vending"
+      },
+      tags: ["Workplace UX", "IoT Integration", "Mobile Design", "Analytics"],
+      images: [aewHeaderDesign, aewVendingInterface, aewWorkplaceSetup]
     }
   };
 
