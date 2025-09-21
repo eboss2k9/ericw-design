@@ -9,6 +9,7 @@ const Navigation = () => {
 
   const navLinks = [
     { path: "/", label: "Portfolio" },
+    { path: "/case-studies", label: "Case Studies" },
   ];
 
   const isActive = (path: string) => location.pathname === path;

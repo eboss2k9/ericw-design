@@ -17,6 +17,7 @@ import {
   Clock,
   Sparkles
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Portfolio = () => {
@@ -146,7 +147,7 @@ const Portfolio = () => {
               </div>
               
               <div className="flex gap-4">
-                <Button size="lg" className="bg-white text-brand-secondary hover:bg-white/90 shadow-lg">{/* Keep existing button content */}
+                <Button size="lg" className="bg-white text-brand-secondary hover:bg-white/90 shadow-lg">
                   <Download className="h-4 w-4 mr-2" />
                   Download Resume
                 </Button>
@@ -283,13 +284,15 @@ const Portfolio = () => {
                       ))}
                     </div>
                     
-                    <Button 
-                      className="self-start group-hover:shadow-lg transition-all bg-brand-primary hover:bg-brand-primary/90"
-                    >
-                      <Clock className="h-4 w-4 mr-2" />
-                      View Full Case Study
-                      <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    <Link to={`/case-studies/${project.id}`}>
+                      <Button 
+                        className="self-start group-hover:shadow-lg transition-all"
+                      >
+                        <Clock className="h-4 w-4 mr-2" />
+                        View Full Case Study
+                        <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
                   </div>
 
                   {/* Images */}
