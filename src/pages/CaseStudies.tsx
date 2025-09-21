@@ -16,6 +16,11 @@ import {
   BarChart3
 } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
+import cjamsHeader from "@/assets/cjams_header_design.png";
+import polyplexusHeader from "@/assets/polyplexus_header_design.png";
+import styletrailHeader from "@/assets/styletrail_header_design.png";
+import underaHeader from "@/assets/undera_header_design.png";
+import workbenchHeader from "@/assets/workbench_header_design.png";
 
 const CaseStudies = () => {
   const { id } = useParams();
@@ -91,7 +96,7 @@ const CaseStudies = () => {
         role: "CEO, StyleTrail LLC"
       },
       tags: ["User Research", "Marketplace Design", "Mobile UX", "Design Systems"],
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      images: [styletrailHeader, "/placeholder.svg", "/placeholder.svg"]
     },
     workbench: {
       title: "Workbench Learning Platform Revolution",
@@ -163,7 +168,7 @@ const CaseStudies = () => {
         role: "Head of Product, Workbench Platform"
       },
       tags: ["Educational UX", "Adaptive Design", "Analytics", "Accessibility"],
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      images: [workbenchHeader, "/placeholder.svg", "/placeholder.svg"]
     },
     polyplexus: {
       title: "Polyplexus Research Collaboration Platform",
@@ -235,7 +240,7 @@ const CaseStudies = () => {
         role: "Research Director, GS3 Program"
       },
       tags: ["Research UX", "Collaboration Tools", "Data Visualization", "AI Integration"],
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      images: [polyplexusHeader, "/placeholder.svg", "/placeholder.svg"]
     },
     "under-armor": {
       title: "Under Armour HoloTats AR Experience",
@@ -307,7 +312,7 @@ const CaseStudies = () => {
         role: "Digital Innovation Director, Under Armour"
       },
       tags: ["AR/VR Design", "Mobile UX", "Brand Experience", "Social Integration"],
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      images: [underaHeader, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
     },
     cjams: {
       title: "CJAMS Government System Redesign",
@@ -379,7 +384,7 @@ const CaseStudies = () => {
         role: "Director of IT Services, Maryland DHS"
       },
       tags: ["Government UX", "Accessibility", "Service Design", "Workflow Optimization"],
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      images: [cjamsHeader, "/placeholder.svg", "/placeholder.svg"]
     }
   };
 
