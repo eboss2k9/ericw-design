@@ -112,7 +112,7 @@ const Portfolio = () => {
     {
       id: "cjams",
       title: "CJAMS Government System",
-      client: "Maryland DHS",
+      client: "Minnesota DHS",
       about: "Complete redesign of critical government services affecting thousands of families. Streamlined complex workflows resulting in 50% reduction in processing time.",
       platform: "Web Application",
       industry: "Government & Public Service",
@@ -352,22 +352,9 @@ const Portfolio = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Map */}
-            <div className="aspect-[16/10] bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197642.23823012237!2d-76.76058314852548!3d39.284622471581436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c803aed6f483b7%3A0x44896a84223e758!2sBaltimore%2C%20MD!5e0!3m2!1sen!2sus!4v1625863122021!5m2!1sen!2sus"
-                width="100%" 
-                height="100%" 
-                style={{border: 0}} 
-                allowFullScreen 
-                loading="lazy"
-                className="rounded-2xl"
-              />
-            </div>
-            
+          <div className="max-w-4xl mx-auto">
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
                   icon: Mail,
@@ -386,7 +373,7 @@ const Portfolio = () => {
                 {
                   icon: MapPin,
                   title: "Location",
-                  content: "Baltimore, Maryland",
+                  content: "Maple Grove, Minnesota",
                   description: "Open to remote & hybrid opportunities"
                 }
               ].map((contact, index) => (

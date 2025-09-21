@@ -332,7 +332,7 @@ const CaseStudies = () => {
     },
     cjams: {
       title: "CJAMS Government System Redesign",
-      client: "Maryland Department of Human Services",
+      client: "Minnesota Department of Human Services",
       duration: "18 months",
       team: "8 designers, 12 developers, 4 researchers",
       role: "Lead UX Designer & Accessibility Champion",
@@ -395,9 +395,9 @@ const CaseStudies = () => {
         { metric: "System Uptime", before: "91%", after: "99.2%", improvement: "+9% improvement" }
       ],
       testimonial: {
-        quote: "Eric's dedication to accessibility and user-centered design has transformed how we serve Maryland families. The efficiency gains have allowed us to help more people faster.",
+        quote: "Eric's dedication to accessibility and user-centered design has transformed how we serve Minnesota families. The efficiency gains have allowed us to help more people faster.",
         author: "Robert Williams",
-        role: "Director of IT Services, Maryland DHS"
+        role: "Director of IT Services, Minnesota DHS"
       },
       tags: ["Government UX", "Accessibility", "Service Design", "Workflow Optimization"],
       images: [cjamsHeader, cjamsDashboard, cjamsNarrative, cjamsCertificate]
