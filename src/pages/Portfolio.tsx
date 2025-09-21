@@ -25,6 +25,9 @@ import cjamsDashboard from "@/assets/cjams_dashboard.jpg";
 import polyplexusConjecture from "@/assets/polyplexus_conjecture.png";
 import polyplexusProfile from "@/assets/polyplexus_profile.png";
 import polyplexusSignin from "@/assets/polyplexus_signin.png";
+import styletrailHome from "@/assets/styletrail_home.jpg";
+import styletrailListing from "@/assets/styletrail_listing.jpg";
+import styletrailBookings from "@/assets/styletrail_bookings.jpg";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -44,7 +47,7 @@ const Portfolio = () => {
       about: "Revolutionary beauty space marketplace connecting professionals with available workspaces. Led complete UX overhaul resulting in 300% increase in bookings.",
       platform: "Web Application",
       industry: "Beauty & Wellness",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      images: [styletrailHome, styletrailListing, styletrailBookings],
       impact: {
         userGrowth: "300%",
         satisfaction: "4.8/5",

@@ -27,6 +27,9 @@ import cjamsDashboard from "@/assets/cjams_dashboard.jpg";
 import polyplexusConjecture from "@/assets/polyplexus_conjecture.png";
 import polyplexusProfile from "@/assets/polyplexus_profile.png";
 import polyplexusSignin from "@/assets/polyplexus_signin.png";
+import styletrailHome from "@/assets/styletrail_home.jpg";
+import styletrailListing from "@/assets/styletrail_listing.jpg";
+import styletrailBookings from "@/assets/styletrail_bookings.jpg";
 
 const CaseStudies = () => {
   const { id } = useParams();
@@ -102,7 +105,7 @@ const CaseStudies = () => {
         role: "CEO, StyleTrail LLC"
       },
       tags: ["User Research", "Marketplace Design", "Mobile UX", "Design Systems"],
-      images: [styletrailHeader, "/placeholder.svg", "/placeholder.svg"]
+      images: [styletrailHeader, styletrailHome, styletrailListing, styletrailBookings]
     },
     workbench: {
       title: "Workbench Learning Platform Revolution",
