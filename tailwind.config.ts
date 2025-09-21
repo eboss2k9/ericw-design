@@ -48,12 +48,11 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          primary: "hsl(var(--brand-primary))",
-          secondary: "hsl(var(--brand-secondary))",
-          accent: "hsl(var(--brand-accent))",
-          success: "hsl(var(--brand-success))",
-          dark: "hsl(var(--brand-dark))",
-          light: "hsl(var(--brand-light))",
+          primary: "hsl(var(--brand-primary))",    /* #1abdd4 */
+          secondary: "hsl(var(--brand-secondary))", /* #222222 */
+          accent: "hsl(var(--brand-accent))",       /* #ffffff */
+          dark: "hsl(var(--brand-dark))",           /* #222222 */
+          light: "hsl(var(--brand-light))",         /* #ffffff */
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

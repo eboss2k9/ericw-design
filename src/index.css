@@ -8,52 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern UX Designer Brand System */
+    /* EWCS Brand Color System */
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 0 0% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 0 0% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 0 0% 13%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 188 79% 47%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 13%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 197 71% 73%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 188 79% 47%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 262 83% 58%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 188 79% 47%;
 
-    /* UX Design Brand Colors */
-    --brand-primary: 262 83% 58%;
-    --brand-secondary: 197 71% 73%;
-    --brand-accent: 45 93% 47%;
-    --brand-success: 142 71% 45%;
-    --brand-dark: 240 10% 3.9%;
-    --brand-light: 0 0% 98%;
+    /* EWCS Brand Colors */
+    --brand-primary: 188 79% 47%;  /* #1abdd4 */
+    --brand-secondary: 0 0% 13%;   /* #222222 */
+    --brand-accent: 0 0% 100%;     /* #ffffff */
+    --brand-dark: 0 0% 13%;        /* #222222 */
+    --brand-light: 0 0% 100%;      /* #ffffff */
     
-    /* Modern Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%), hsl(197 71% 73%));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(240 4.8% 95.9%));
-    --gradient-accent: linear-gradient(135deg, hsl(197 71% 73%), hsl(45 93% 47%));
+    /* Brand Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(188 79% 47%), hsl(188 79% 35%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 96%));
+    --gradient-accent: linear-gradient(135deg, hsl(188 79% 47%), hsl(188 79% 60%));
     
     /* Modern Shadows */
-    --shadow-glow: 0 20px 25px -5px hsl(262 83% 58% / 0.1), 0 10px 10px -5px hsl(262 83% 58% / 0.04);
-    --shadow-card: 0 4px 6px -1px hsl(240 10% 3.9% / 0.1), 0 2px 4px -1px hsl(240 10% 3.9% / 0.06);
-    --shadow-button: 0 10px 15px -3px hsl(262 83% 58% / 0.1), 0 4px 6px -2px hsl(262 83% 58% / 0.05);
+    --shadow-glow: 0 20px 25px -5px hsl(188 79% 47% / 0.15), 0 10px 10px -5px hsl(188 79% 47% / 0.1);
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 13% / 0.1), 0 2px 4px -1px hsl(0 0% 13% / 0.06);
+    --shadow-button: 0 10px 15px -3px hsl(188 79% 47% / 0.2), 0 4px 6px -2px hsl(188 79% 47% / 0.1);
 
     --radius: 0.5rem;
 
@@ -75,41 +74,41 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 13%;
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 188 79% 47%;
+    --primary-foreground: 0 0% 13%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 188 79% 47%;
+    --accent-foreground: 0 0% 13%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 188 79% 47%;
+    --sidebar-background: 0 0% 13%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 188 79% 47%;
+    --sidebar-primary-foreground: 0 0% 13%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 188 79% 47%;
   }
 }
 

@@ -113,47 +113,47 @@ const Portfolio = () => {
     <div className="min-h-screen bg-background overflow-hidden">
       <Navigation />
       
-      {/* Hero Section with Modern Gradient */}
-      <section className="relative min-h-screen flex items-center px-4 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent">
-        <div className="absolute inset-0 bg-black/20"></div>
+      {/* Hero Section with EWCS Brand Colors */}
+      <section className="relative min-h-screen flex items-center px-4 bg-gradient-to-br from-brand-primary to-brand-secondary">
+        <div className="absolute inset-0 bg-brand-secondary/30"></div>
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-up">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                <Sparkles className="h-4 w-4 text-brand-light" />
-                <span className="text-brand-light text-sm font-medium">Available for New Projects</span>
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                <Sparkles className="h-4 w-4 text-white" />
+                <span className="text-white text-sm font-medium">Available for New Projects</span>
               </div>
               
-              <h1 className="text-6xl md:text-7xl font-bold text-brand-light mb-6 leading-tight">
+              <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 UX that 
-                <span className="bg-gradient-to-r from-brand-accent to-white bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-primary to-white bg-clip-text text-transparent">
                   {" "}drives results
                 </span>
               </h1>
               
-              <h2 className="text-xl md:text-2xl text-brand-light/90 mb-8 leading-relaxed">
+              <h2 className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
                 17 years crafting user experiences that don't just look good — they deliver measurable business impact.
               </h2>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
                 {impactStats.map((stat, index) => (
                   <div key={index} className="text-center animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
-                    <stat.icon className="h-6 w-6 text-brand-accent mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-brand-light">{stat.value}</div>
-                    <div className="text-sm text-brand-light/80">{stat.label}</div>
+                    <stat.icon className="h-6 w-6 text-brand-primary mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-white">{stat.value}</div>
+                    <div className="text-sm text-white/80">{stat.label}</div>
                   </div>
                 ))}
               </div>
               
               <div className="flex gap-4">
-                <Button size="lg" className="bg-white text-brand-primary hover:bg-white/90 shadow-lg">
+                <Button size="lg" className="bg-white text-brand-secondary hover:bg-white/90 shadow-lg">{/* Keep existing button content */}
                   <Download className="h-4 w-4 mr-2" />
                   Download Resume
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-white text-white hover:bg-white hover:text-brand-primary"
+                  className="border-white text-white hover:bg-white hover:text-brand-secondary"
                 >
                   View Case Studies
                   <ArrowRight className="h-4 w-4 ml-2" />
@@ -170,10 +170,10 @@ const Portfolio = () => {
                 />
               </div>
               {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 bg-brand-accent rounded-full p-3 shadow-lg animate-pulse">
+              <div className="absolute -top-4 -right-4 bg-brand-primary rounded-full p-3 shadow-lg animate-pulse">
                 <Target className="h-6 w-6 text-white" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-brand-success rounded-full p-3 shadow-lg animate-pulse" style={{animationDelay: '1s'}}>
+              <div className="absolute -bottom-4 -left-4 bg-brand-primary rounded-full p-3 shadow-lg animate-pulse" style={{animationDelay: '1s'}}>
                 <TrendingUp className="h-6 w-6 text-white" />
               </div>
             </div>
