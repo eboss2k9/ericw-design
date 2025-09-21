@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo-2.svg";
 
 const Navigation = () => {
   const location = useLocation();
@@ -15,15 +16,18 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-card border-b border-border sticky top-0 z-50">
+    <nav className="sticky top-0 z-50 border-b border-border" style={{ backgroundColor: '#222222' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="font-bold text-xl text-foreground">
-              EWCS
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2">
+              <div className="font-bold text-xl text-white">
+                EWCS
+              </div>
+              <img src={logo} alt="EWCS Logo" className="h-8 w-8" />
             </div>
-            <div className="text-muted-foreground text-sm tracking-wider">
+            <div className="text-white/70 text-sm tracking-wider">
               Eric Warner's Creative Studio
             </div>
           </Link>
@@ -36,8 +40,8 @@ const Navigation = () => {
                 to={link.path}
                 className={`font-medium transition-colors ${
                   isActive(link.path)
-                    ? "text-foreground border-b-2 border-primary pb-1"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-white border-b-2 border-primary pb-1"
+                    : "text-white/70 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -69,8 +73,8 @@ const Navigation = () => {
                   to={link.path}
                   className={`font-medium transition-colors ${
                     isActive(link.path)
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "text-white"
+                      : "text-white/70 hover:text-white"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
