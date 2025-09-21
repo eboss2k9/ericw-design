@@ -35,6 +35,7 @@ import uaMenuPopup from "@/assets/ua_menu_popup.png";
 import workbenchHomepage from "@/assets/workbench_homepage.jpg";
 import workbenchPartners from "@/assets/workbench_partners.jpg";
 import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
+import ericWarnerHero from "@/assets/eric_warner_hero.jpg";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -183,7 +184,7 @@ const Portfolio = () => {
             <div className="relative animate-float">
               <div className="aspect-square bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/20">
                 <img 
-                  src="/placeholder.svg" 
+                  src={ericWarnerHero} 
                   alt="Eric D. Warner - UX Design Leader" 
                   className="w-full h-full object-cover"
                 />
