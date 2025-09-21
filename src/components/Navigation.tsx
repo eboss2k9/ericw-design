@@ -8,10 +8,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/products", label: "All Products" },
-    { path: "/about", label: "About Us" },
-    { path: "/contact", label: "Contact" },
+    { path: "/", label: "Portfolio" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -22,11 +19,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="font-bold text-xl text-luxury-dark">
-              DECRIS
+            <div className="font-bold text-xl text-foreground">
+              EWCS
             </div>
-            <div className="text-luxury-medium text-sm tracking-wider">
-              LUXURY SPORTCLOTHING
+            <div className="text-muted-foreground text-sm tracking-wider">
+              Eric Warner's Creative Studio
             </div>
           </Link>
 
@@ -38,15 +35,15 @@ const Navigation = () => {
                 to={link.path}
                 className={`font-medium transition-colors ${
                   isActive(link.path)
-                    ? "text-luxury-dark border-b-2 border-luxury-dark pb-1"
-                    : "text-luxury-medium hover:text-luxury-dark"
+                    ? "text-foreground border-b-2 border-primary pb-1"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-            <Button variant="outline" className="ml-4">
-              Get Quote
+            <Button variant="outline" className="ml-4" asChild>
+              <a href="mailto:e.warner86@gmail.com?subject=Let's Chat!">Contact</a>
             </Button>
           </div>
 
@@ -71,16 +68,16 @@ const Navigation = () => {
                   to={link.path}
                   className={`font-medium transition-colors ${
                     isActive(link.path)
-                      ? "text-luxury-dark"
-                      : "text-luxury-medium hover:text-luxury-dark"
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button variant="outline" className="w-fit">
-                Get Quote
+              <Button variant="outline" className="w-fit" asChild>
+                <a href="mailto:e.warner86@gmail.com?subject=Let's Chat!">Contact</a>
               </Button>
             </div>
           </div>
