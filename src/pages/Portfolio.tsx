@@ -22,6 +22,9 @@ import { useState } from "react";
 import cjamsNarrative from "@/assets/cjams_narrative.jpg";
 import cjamsCertificate from "@/assets/cjams_certificate.jpg";
 import cjamsDashboard from "@/assets/cjams_dashboard.jpg";
+import polyplexusConjecture from "@/assets/polyplexus_conjecture.png";
+import polyplexusProfile from "@/assets/polyplexus_profile.png";
+import polyplexusSignin from "@/assets/polyplexus_signin.png";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -72,7 +75,7 @@ const Portfolio = () => {
       about: "Pioneered cross-disciplinary research collaboration platform under GS3 program. Created intuitive workflows that accelerated hypothesis generation by 40%.",
       platform: "Web Application",
       industry: "Research & Science",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      images: [polyplexusConjecture, polyplexusProfile, polyplexusSignin],
       impact: {
         researchSpeed: "40%",
         collaboration: "250%",
