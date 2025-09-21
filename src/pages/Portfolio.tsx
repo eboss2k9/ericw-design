@@ -163,9 +163,11 @@ const Portfolio = () => {
               </div>
               
               <div className="flex gap-4">
-                <Button size="lg" className="bg-white text-brand-secondary hover:bg-white/90 shadow-lg">
-                  <Download className="h-4 w-4 mr-2" />
-                  Download Resume
+                <Button size="lg" className="bg-white text-brand-secondary hover:bg-white/90 shadow-lg" asChild>
+                  <a href="/Warner_Eric_Resume.pdf" download="Warner_Eric_Resume.pdf">
+                    <Download className="h-4 w-4 mr-2" />
+                    Download Resume
+                  </a>
                 </Button>
                 <Button 
                   variant="outline" 
