@@ -492,14 +492,14 @@ const CaseStudies = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="relative py-20 px-4 bg-gradient-to-br from-brand-primary to-brand-secondary">
+        <section className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-primary to-brand-secondary">
           <div className="absolute inset-0 bg-brand-secondary/30"></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6">
                 Case Studies
               </h1>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto">
                 Deep dives into design challenges, processes, and measurable outcomes that drive business success
               </p>
             </div>
@@ -507,9 +507,9 @@ const CaseStudies = () => {
         </section>
 
         {/* Case Studies Grid */}
-        <section className="py-20 px-4">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid gap-8 sm:gap-10 lg:gap-12 lg:grid-cols-2">
               {Object.entries(caseStudies).map(([key, study]) => (
                 <Card key={key} className="group hover:shadow-2xl transition-all duration-500 overflow-hidden">
                   <div className="aspect-[16/10] bg-muted overflow-hidden">
@@ -519,21 +519,21 @@ const CaseStudies = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <CardContent className="p-8">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Badge variant="outline">{study.client}</Badge>
-                      <Badge variant="secondary">{study.duration}</Badge>
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                      <Badge variant="outline" className="text-xs sm:text-sm">{study.client}</Badge>
+                      <Badge variant="secondary" className="text-xs sm:text-sm">{study.duration}</Badge>
                     </div>
                     
-                    <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-brand-primary transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-brand-primary transition-colors">
                       {study.title}
                     </h3>
                     
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                       {study.challenge.substring(0, 150)}...
                     </p>
 
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
                       {study.tags.map((tag) => (
                         <Badge key={tag} variant="outline" className="text-xs">
                           {tag}
@@ -542,7 +542,7 @@ const CaseStudies = () => {
                     </div>
 
                     <Link to={`/case-studies/${key}`}>
-                      <Button className="group-hover:shadow-lg transition-all">
+                      <Button className="group-hover:shadow-lg transition-all w-full sm:w-auto">
                         <Eye className="h-4 w-4 mr-2" />
                         View Full Case Study
                         <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -706,67 +706,67 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* Results */}
-      <section className="py-16 px-4 bg-gradient-to-br from-brand-primary to-brand-secondary">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Measurable Impact
-            </h2>
-            <p className="text-white/90 text-lg">
-              Data-driven results that demonstrate real business value
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentStudy.results.map((result, index) => (
-              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20">
-                <CardContent className="p-6 text-center">
-                  <BarChart3 className="h-8 w-8 text-white mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{result.metric}</h3>
-                  <div className="space-y-1">
-                    <div className="text-sm text-white/70">Before: {result.before}</div>
-                    <div className="text-sm text-white/70">After: {result.after}</div>
-                    <div className="text-xl font-bold text-white">{result.improvement}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <blockquote className="text-2xl md:text-3xl font-medium text-foreground mb-8 leading-relaxed">
-            "{currentStudy.testimonial.quote}"
-          </blockquote>
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center">
-              <Users className="h-6 w-6 text-white" />
+        {/* Results */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-primary to-brand-secondary">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                Measurable Impact
+              </h2>
+              <p className="text-white/90 text-sm sm:text-base lg:text-lg">
+                Data-driven results that demonstrate real business value
+              </p>
             </div>
-            <div className="text-left">
-              <div className="font-semibold text-foreground">{currentStudy.testimonial.author}</div>
-              <div className="text-muted-foreground">{currentStudy.testimonial.role}</div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {currentStudy.results.map((result, index) => (
+                <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20">
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <BarChart3 className="h-6 w-6 sm:h-8 sm:w-8 text-white mx-auto mb-3 sm:mb-4" />
+                    <h3 className="text-base sm:text-lg font-semibold text-white mb-2">{result.metric}</h3>
+                    <div className="space-y-1">
+                      <div className="text-xs sm:text-sm text-white/70">Before: {result.before}</div>
+                      <div className="text-xs sm:text-sm text-white/70">After: {result.after}</div>
+                      <div className="text-lg sm:text-xl font-bold text-white">{result.improvement}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Navigation to other studies */}
-      <section className="py-12 px-4 border-t">
-        <div className="container mx-auto max-w-4xl">
-          <div className="flex justify-between items-center">
-            <Link to="/case-studies" className="text-brand-primary hover:text-brand-primary/80 transition-colors">
-              ← View All Case Studies
-            </Link>
-            <Link to="/portfolio#contact" className="text-brand-primary hover:text-brand-primary/80 transition-colors">
-              Let's Work Together →
-            </Link>
+        {/* Testimonial */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-4xl text-center">
+            <blockquote className="text-xl sm:text-2xl md:text-3xl font-medium text-foreground mb-6 sm:mb-8 leading-relaxed">
+              "{currentStudy.testimonial.quote}"
+            </blockquote>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+              <div className="w-12 h-12 bg-brand-primary rounded-full flex items-center justify-center">
+                <Users className="h-6 w-6 text-white" />
+              </div>
+              <div className="text-center sm:text-left">
+                <div className="font-semibold text-foreground">{currentStudy.testimonial.author}</div>
+                <div className="text-muted-foreground text-sm sm:text-base">{currentStudy.testimonial.role}</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Navigation to other studies */}
+        <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 border-t">
+          <div className="container mx-auto max-w-4xl">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+              <Link to="/case-studies" className="text-brand-primary hover:text-brand-primary/80 transition-colors">
+                ← View All Case Studies
+              </Link>
+              <Link to="/portfolio#contact" className="text-brand-primary hover:text-brand-primary/80 transition-colors">
+                Let's Work Together →
+              </Link>
+            </div>
+          </div>
+        </section>
     </div>
   );
 };

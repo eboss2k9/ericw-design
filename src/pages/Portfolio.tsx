@@ -150,28 +150,28 @@ const Portfolio = () => {
       <Navigation />
       
       {/* Hero Section with EWCS Brand Colors */}
-      <section className="relative min-h-screen flex items-center px-4 bg-gradient-to-br from-brand-primary to-brand-secondary">
+      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-primary to-brand-secondary">
         <div className="absolute inset-0 bg-brand-secondary/30"></div>
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div className="animate-slide-up">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
                 <Sparkles className="h-4 w-4 text-white" />
                 <span className="text-white text-sm font-medium">Available for New Projects</span>
               </div>
               
-              <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                 UX that 
                 <span className="bg-gradient-to-r from-brand-primary to-white bg-clip-text text-transparent">
                   {" "}drives results
                 </span>
               </h1>
               
-              <h2 className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+              <h2 className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed">
                 17 years crafting user experiences that don't just look good — they deliver measurable business impact.
               </h2>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-10">
                 {impactStats.map((stat, index) => (
                   <div key={index} className="text-center animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                     <stat.icon className="h-6 w-6 text-brand-primary mx-auto mb-2" />
@@ -181,8 +181,8 @@ const Portfolio = () => {
                 ))}
               </div>
               
-              <div className="flex gap-4">
-                <Button size="lg" className="bg-brand-primary text-white hover:bg-brand-primary/90 shadow-lg" asChild>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button size="lg" className="bg-brand-primary text-white hover:bg-brand-primary/90 shadow-lg w-full sm:w-auto" asChild>
                   <a href="/Warner_Eric_Resume.pdf" download="Warner_Eric_Resume.pdf">
                     <Download className="h-4 w-4 mr-2" />
                     Download Resume
@@ -191,7 +191,7 @@ const Portfolio = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
+                  className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white w-full sm:w-auto"
                 >
                   View Case Studies
                   <ArrowRight className="h-4 w-4 ml-2" />
@@ -220,18 +220,18 @@ const Portfolio = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-r from-background to-muted">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-background to-muted">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               My Design Process
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               Data-driven design thinking that turns complex problems into intuitive solutions
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               { step: "01", title: "Research & Discovery", desc: "Deep user research, competitive analysis, and stakeholder alignment" },
               { step: "02", title: "Strategy & Planning", desc: "Information architecture, user flows, and technical requirements" },
@@ -253,18 +253,18 @@ const Portfolio = () => {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-20 px-4 bg-background">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               Featured Work
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               Case studies showcasing measurable impact across industries
             </p>
           </div>
 
-          <div className="space-y-20">
+          <div className="space-y-12 sm:space-y-16 lg:space-y-20">
             {projects.map((project, index) => (
               <Card 
                 key={project.id} 
@@ -276,7 +276,7 @@ const Portfolio = () => {
               >
                 <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                   {/* Content */}
-                  <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className={`p-6 sm:p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                     <div className="flex items-center gap-3 mb-4">
                       {project.featured && (
                         <Badge className="bg-brand-primary text-white">Featured</Badge>
@@ -285,7 +285,7 @@ const Portfolio = () => {
                       <Badge variant="secondary">{project.industry}</Badge>
                     </div>
                     
-                    <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 group-hover:text-brand-primary transition-colors">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 group-hover:text-brand-primary transition-colors">
                       {project.title}
                     </h3>
                     
@@ -301,7 +301,7 @@ const Portfolio = () => {
                     </div>
 
                     {/* Impact Metrics */}
-                    <div className="grid grid-cols-3 gap-4 mb-8 p-4 bg-muted rounded-lg">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8 p-3 sm:p-4 bg-muted rounded-lg">
                       {Object.entries(project.impact).map(([key, value]) => (
                         <div key={key} className="text-center">
                           <div className="text-2xl font-bold text-brand-primary">{value}</div>
@@ -334,13 +334,13 @@ const Portfolio = () => {
 
                   {/* Images */}
                   <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''} bg-gradient-to-br from-muted to-muted/50`}>
-                    <div className="grid grid-cols-2 gap-4 p-8 h-full">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 h-full">
                       {project.images.map((image, imgIndex) => (
                         <div 
                           key={imgIndex} 
                           className={`rounded-lg overflow-hidden shadow-md transition-all duration-500 ${
                             hoveredProject === project.id ? 'hover:scale-105 hover:shadow-xl' : ''
-                          } ${imgIndex === 0 ? 'col-span-2' : ''}`}
+                          } ${imgIndex === 0 ? 'sm:col-span-2' : ''}`}
                           style={{
                             aspectRatio: imgIndex === 0 ? '16/10' : '4/3'
                           }}
@@ -362,20 +362,20 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-brand-primary to-brand-secondary">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-brand-primary to-brand-secondary">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
               Let's Create Something Amazing
             </h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
               Ready to transform your user experience? Let's discuss your project.
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
             {/* Contact Info */}
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
                 {
                   icon: Mail,

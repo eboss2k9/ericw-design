@@ -10,12 +10,12 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-luxury-dark mb-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div className="mb-8 sm:mb-12 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-luxury-dark mb-4">
             Contact Us
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to elevate your business with premium sportswear? 
             Get in touch with our team for personalized service and bulk pricing.
           </p>
@@ -23,7 +23,7 @@ const Contact = () => {
 
         <div className="flex justify-center">
           {/* Contact Information */}
-          <div className="space-y-8 max-w-2xl w-full">
+          <div className="space-y-6 sm:space-y-8 max-w-2xl w-full">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center text-luxury-dark">

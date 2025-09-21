@@ -31,36 +31,36 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100vh] sm:h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
             alt="Luxury Sportswear Collection"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-luxury-dark/40"></div>
         </div>
         
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <Badge variant="secondary" className="mb-4 bg-white/10 text-white border-white/20">
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Badge variant="secondary" className="mb-4 sm:mb-6 bg-white/10 text-white border-white/20 text-xs sm:text-sm">
             B2B Luxury Sportswear
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
             DECRIS
-            <span className="block text-3xl md:text-4xl font-light tracking-wide">
+            <span className="block text-2xl sm:text-3xl md:text-4xl font-light tracking-wide mt-2">
               LUXURY SPORTCLOTHING
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
             Premium athletic wear designed for performance, crafted for luxury. 
             Wholesale solutions for retailers and businesses worldwide.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="default" className="bg-white text-luxury-dark hover:bg-white/90">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+            <Button size="lg" variant="default" className="bg-white text-luxury-dark hover:bg-white/90 w-full sm:w-auto">
               View Catalog
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-black hover:text-black hover:bg-transparent">
+            <Button size="lg" variant="outline" className="border-white text-black hover:text-black hover:bg-transparent w-full sm:w-auto">
               Get B2B Quote
             </Button>
           </div>
@@ -68,9 +68,9 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 lg:py-20 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-luxury-accent rounded-full mx-auto mb-4 flex items-center justify-center">
                 <Shield className="h-8 w-8 text-white" />
@@ -107,19 +107,19 @@ const Index = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-luxury-dark mb-4">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-luxury-dark mb-4">
               Product Categories
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
               Explore our comprehensive range of luxury sportswear across all categories, 
               from athletic wear to casual comfort.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
             {categories.map((category, index) => (
               <Card key={index} className="group hover:shadow-lg transition-shadow cursor-pointer">
                 <CardContent className="p-6 text-center">
@@ -133,7 +133,7 @@ const Index = () => {
           </div>
           
           <div className="text-center">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="w-full sm:w-auto">
               <Link to="/products">
                 View All Categories
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -144,25 +144,25 @@ const Index = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-luxury-dark mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-luxury-dark mb-4">
               Featured Products
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
               Discover our best-selling items that combine performance, style, and luxury craftsmanship.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
           
           <div className="text-center">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
               <Link to="/products">
                 View All Products
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -173,20 +173,20 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-luxury-dark text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-luxury-dark text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Ready to Partner with Decris?
           </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-white/90 max-w-2xl mx-auto">
             Join hundreds of businesses worldwide who trust Decris for their premium sportswear needs. 
             Get personalized B2B pricing and dedicated support.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+            <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
               <Link to="/contact">Get Quote</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-black hover:text-black hover:bg-transparent" asChild>
+            <Button size="lg" variant="outline" className="border-white text-black hover:text-black hover:bg-transparent w-full sm:w-auto" asChild>
               <Link to="/about">Learn More</Link>
             </Button>
           </div>
