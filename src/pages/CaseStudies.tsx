@@ -30,6 +30,10 @@ import polyplexusSignin from "@/assets/polyplexus_signin.png";
 import styletrailHome from "@/assets/styletrail_home.jpg";
 import styletrailListing from "@/assets/styletrail_listing.jpg";
 import styletrailBookings from "@/assets/styletrail_bookings.jpg";
+import uaCameraScreen from "@/assets/ua_camera_screen.png";
+import uaGlobalAlert from "@/assets/ua_global_alert.png";
+import uaOnboarding from "@/assets/ua_onboarding.png";
+import uaMenuPopup from "@/assets/ua_menu_popup.png";
 
 const CaseStudies = () => {
   const { id } = useParams();
@@ -321,7 +325,7 @@ const CaseStudies = () => {
         role: "Digital Innovation Director, Under Armour"
       },
       tags: ["AR/VR Design", "Mobile UX", "Brand Experience", "Social Integration"],
-      images: [underaHeader, "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      images: [underaHeader, uaCameraScreen, uaGlobalAlert, uaOnboarding, uaMenuPopup]
     },
     cjams: {
       title: "CJAMS Government System Redesign",
