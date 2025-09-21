@@ -34,6 +34,9 @@ import uaCameraScreen from "@/assets/ua_camera_screen.png";
 import uaGlobalAlert from "@/assets/ua_global_alert.png";
 import uaOnboarding from "@/assets/ua_onboarding.png";
 import uaMenuPopup from "@/assets/ua_menu_popup.png";
+import workbenchHomepage from "@/assets/workbench_homepage.jpg";
+import workbenchPartners from "@/assets/workbench_partners.jpg";
+import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
 
 const CaseStudies = () => {
   const { id } = useParams();
@@ -181,7 +184,7 @@ const CaseStudies = () => {
         role: "Head of Product, Workbench Platform"
       },
       tags: ["Educational UX", "Adaptive Design", "Analytics", "Accessibility"],
-      images: [workbenchHeader, "/placeholder.svg", "/placeholder.svg"]
+      images: [workbenchHeader, workbenchHomepage, workbenchPartners, workbenchWhatWeDo]
     },
     polyplexus: {
       title: "Polyplexus Research Collaboration Platform",

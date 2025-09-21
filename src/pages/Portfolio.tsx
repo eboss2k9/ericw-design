@@ -32,6 +32,9 @@ import uaCameraScreen from "@/assets/ua_camera_screen.png";
 import uaGlobalAlert from "@/assets/ua_global_alert.png";
 import uaOnboarding from "@/assets/ua_onboarding.png";
 import uaMenuPopup from "@/assets/ua_menu_popup.png";
+import workbenchHomepage from "@/assets/workbench_homepage.jpg";
+import workbenchPartners from "@/assets/workbench_partners.jpg";
+import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -67,7 +70,7 @@ const Portfolio = () => {
       about: "Transformed educational content delivery through engaging, personalized learning experiences. Designed adaptive learning paths that increased completion rates by 85%.",
       platform: "Web Application",
       industry: "EdTech & STEM",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      images: [workbenchHomepage, workbenchPartners, workbenchWhatWeDo],
       impact: {
         engagement: "85%",
         retention: "78%",
