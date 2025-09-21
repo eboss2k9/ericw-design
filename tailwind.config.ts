@@ -47,11 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        luxury: {
-          dark: "hsl(var(--luxury-dark))",
-          medium: "hsl(var(--luxury-medium))",
-          light: "hsl(var(--luxury-light))",
-          accent: "hsl(var(--luxury-accent))",
+        brand: {
+          primary: "hsl(var(--brand-primary))",
+          secondary: "hsl(var(--brand-secondary))",
+          accent: "hsl(var(--brand-accent))",
+          success: "hsl(var(--brand-success))",
+          dark: "hsl(var(--brand-dark))",
+          light: "hsl(var(--brand-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -86,10 +88,30 @@ export default {
             height: "0",
           },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        glow: {
+          "0%": { boxShadow: "0 0 20px hsl(262 83% 58% / 0.3)" },
+          "100%": { boxShadow: "0 0 30px hsl(262 83% 58% / 0.6)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 0.5s ease-in",
+        "slide-up": "slideUp 0.5s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
       },
     },
   },

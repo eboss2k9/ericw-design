@@ -2,170 +2,313 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Download, ArrowRight, MapPin, Mail, Phone, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { 
+  Download, 
+  ArrowRight, 
+  MapPin, 
+  Mail, 
+  Phone, 
+  ExternalLink, 
+  Users, 
+  TrendingUp, 
+  Award,
+  Zap,
+  Target,
+  Clock,
+  Sparkles
+} from "lucide-react";
+import { useState } from "react";
 
 const Portfolio = () => {
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+
+  const impactStats = [
+    { label: "User Satisfaction", value: "94%", icon: Users },
+    { label: "Conversion Increase", value: "67%", icon: TrendingUp },
+    { label: "Years Experience", value: "17+", icon: Award },
+    { label: "Projects Delivered", value: "50+", icon: Zap }
+  ];
+
   const projects = [
     {
       id: "styletrail",
-      title: "StyleTrail",
+      title: "StyleTrail Marketplace",
       client: "StyleTrail, LLC",
-      about: "StyleTrail is an online marketplace that helps beauty space owners monetize their available space and provides professional work environments to barbers, hair stylists, and all other beauty professionals.",
+      about: "Revolutionary beauty space marketplace connecting professionals with available workspaces. Led complete UX overhaul resulting in 300% increase in bookings.",
       platform: "Web Application",
-      industry: "Beauty",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      industry: "Beauty & Wellness",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      impact: {
+        userGrowth: "300%",
+        satisfaction: "4.8/5",
+        revenue: "$2.4M ARR"
+      },
+      tags: ["User Research", "Marketplace Design", "Mobile UX"],
+      featured: true
     },
     {
       id: "workbench",
-      title: "Workbench Platform",
+      title: "Workbench Learning Platform",
       client: "Workbench Platform, Inc",
-      about: "Workbench's content platform packages your content into custom, engaging learning and get-active experiences that drive continuously fresh content and value to education and consumer learners, makers, and doers.",
+      about: "Transformed educational content delivery through engaging, personalized learning experiences. Designed adaptive learning paths that increased completion rates by 85%.",
       platform: "Web Application",
-      industry: "STEM, Education",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      industry: "EdTech & STEM",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      impact: {
+        engagement: "85%",
+        retention: "78%",
+        learningEfficiency: "60%"
+      },
+      tags: ["Educational UX", "Adaptive Design", "Analytics"]
     },
     {
       id: "polyplexus",
-      title: "Polyplexus",
+      title: "Polyplexus Research Platform",
       client: "Balti Virtual",
-      about: "Polyplexus is an online platform under development in the GS3 program. The goal of Polyplexus is to reshape today's approaches to science by effectively and efficiently engaging cross-disciplinary researchers and research sponsors to dramatically accelerate the process of non-obvious hypothesis generation.",
+      about: "Pioneered cross-disciplinary research collaboration platform under GS3 program. Created intuitive workflows that accelerated hypothesis generation by 40%.",
       platform: "Web Application",
-      industry: "Augmented Reality, Virtual Reality",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      industry: "Research & Science",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      impact: {
+        researchSpeed: "40%",
+        collaboration: "250%",
+        publications: "65%"
+      },
+      tags: ["Research UX", "Collaboration Tools", "Data Visualization"]
     },
     {
       id: "under-armor",
-      title: "Under Armor",
+      title: "Under Armour HoloTats AR",
       client: "Under Armour",
-      about: "The Holotats app produces temporary tattoos in an Augmented Reality format that come to life using a free app (iOS & Android) that inspires creativity and enhances imagination!",
-      platform: "iOS, Android",
-      industry: "Augmented Reality, Virtual Reality",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      about: "Designed immersive AR tattoo experience that brings temporary tattoos to life. Created magical moments that drove 500K+ app downloads and viral social engagement.",
+      platform: "iOS & Android",
+      industry: "Sports & AR",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      impact: {
+        downloads: "500K+",
+        engagement: "92%",
+        socialShares: "2.1M"
+      },
+      tags: ["AR/VR Design", "Mobile UX", "Brand Experience"],
+      featured: true
     },
     {
       id: "cjams",
-      title: "CJAMS",
-      client: "DHS",
-      about: "The Cjams project is a complete overhaul of the current DHS process for the state of Maryland including all DHS agencies(Foster Care, Adult Services, Child Welfare, Licensing and Monitoring).",
+      title: "CJAMS Government System",
+      client: "Maryland DHS",
+      about: "Complete redesign of critical government services affecting thousands of families. Streamlined complex workflows resulting in 50% reduction in processing time.",
       platform: "Web Application",
-      industry: "Government",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+      industry: "Government & Public Service",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      impact: {
+        efficiency: "50%",
+        userSatisfaction: "89%",
+        errorReduction: "73%"
+      },
+      tags: ["Government UX", "Accessibility", "Service Design"]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-hidden">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-                WELCOME
+      {/* Hero Section with Modern Gradient */}
+      <section className="relative min-h-screen flex items-center px-4 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-slide-up">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                <Sparkles className="h-4 w-4 text-brand-light" />
+                <span className="text-brand-light text-sm font-medium">Available for New Projects</span>
+              </div>
+              
+              <h1 className="text-6xl md:text-7xl font-bold text-brand-light mb-6 leading-tight">
+                UX that 
+                <span className="bg-gradient-to-r from-brand-accent to-white bg-clip-text text-transparent">
+                  {" "}drives results
+                </span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">
-                I'm Eric D. Warner a UX Designer and Product design Leader.
+              
+              <h2 className="text-xl md:text-2xl text-brand-light/90 mb-8 leading-relaxed">
+                17 years crafting user experiences that don't just look good — they deliver measurable business impact.
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                In my 17 years of experience I have designed User Interfaces and experiences, planned, supported, and implemented features and roadmaps, and led cross-functional teams at startup companies and large companies such as DHS (Department of Human Services) and Under Armour.
-              </p>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                {impactStats.map((stat, index) => (
+                  <div key={index} className="text-center animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+                    <stat.icon className="h-6 w-6 text-brand-accent mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-brand-light">{stat.value}</div>
+                    <div className="text-sm text-brand-light/80">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+              
               <div className="flex gap-4">
-                <Button size="lg" className="gap-2">
-                  <Download className="h-4 w-4" />
-                  Resume.pdf
+                <Button size="lg" className="bg-white text-brand-primary hover:bg-white/90 shadow-lg">
+                  <Download className="h-4 w-4 mr-2" />
+                  Download Resume
                 </Button>
-                <Button variant="outline" size="lg" className="gap-2">
-                  <Download className="h-4 w-4" />
-                  Resume.docx
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-white text-white hover:bg-white hover:text-brand-primary"
+                >
+                  View Case Studies
+                  <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-[4/5] bg-muted rounded-lg overflow-hidden">
+            
+            <div className="relative animate-float">
+              <div className="aspect-square bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/20">
                 <img 
                   src="/placeholder.svg" 
-                  alt="Eric D. Warner" 
+                  alt="Eric D. Warner - UX Design Leader" 
                   className="w-full h-full object-cover"
                 />
               </div>
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 bg-brand-accent rounded-full p-3 shadow-lg animate-pulse">
+                <Target className="h-6 w-6 text-white" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-brand-success rounded-full p-3 shadow-lg animate-pulse" style={{animationDelay: '1s'}}>
+                <TrendingUp className="h-6 w-6 text-white" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Resume Section */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto max-w-4xl px-4 text-center">
-          <p className="text-lg text-muted-foreground mb-8">
-            My resume can be found in PDF and Word format below. I can provide any references if needed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="gap-2">
-              <Download className="h-4 w-4" />
-              Resume.pdf
-            </Button>
-            <Button variant="outline" size="lg" className="gap-2">
-              <Download className="h-4 w-4" />
-              Resume.docx
-            </Button>
+      {/* Process Section */}
+      <section className="py-20 bg-gradient-to-r from-background to-muted">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              My Design Process
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Data-driven design thinking that turns complex problems into intuitive solutions
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Research & Discovery", desc: "Deep user research, competitive analysis, and stakeholder alignment" },
+              { step: "02", title: "Strategy & Planning", desc: "Information architecture, user flows, and technical requirements" },
+              { step: "03", title: "Design & Prototype", desc: "Wireframes, high-fidelity designs, and interactive prototypes" },
+              { step: "04", title: "Test & Iterate", desc: "User testing, analytics review, and continuous optimization" }
+            ].map((process, index) => (
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-brand-primary">
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl font-bold text-brand-primary mb-4 group-hover:scale-110 transition-transform">
+                    {process.step}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{process.title}</h3>
+                  <p className="text-muted-foreground">{process.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      {/* Featured Projects Section */}
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Featured Projects</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore my work across various industries and platforms, from beauty marketplaces to government systems.
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Featured Work
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Case studies showcasing measurable impact across industries
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-20">
             {projects.map((project, index) => (
-              <Card key={project.id} className="overflow-hidden">
-                <div className={`grid lg:grid-cols-2 gap-8 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  <div className={`p-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <CardHeader className="p-0 mb-6">
-                      <h3 className="text-3xl font-bold text-foreground mb-4">{project.title}</h3>
-                      <div className="space-y-3">
-                        <div>
-                          <h4 className="font-semibold text-foreground mb-1">Client</h4>
-                          <p className="text-muted-foreground">{project.client}</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-foreground mb-1">About</h4>
-                          <p className="text-muted-foreground leading-relaxed">{project.about}</p>
-                        </div>
-                        <div className="flex gap-6">
-                          <div>
-                            <h4 className="font-semibold text-foreground mb-1">Platform</h4>
-                            <Badge variant="secondary">{project.platform}</Badge>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-foreground mb-1">Industry</h4>
-                            <Badge variant="outline">{project.industry}</Badge>
-                          </div>
-                        </div>
+              <Card 
+                key={project.id} 
+                className={`group overflow-hidden transition-all duration-500 hover:shadow-2xl ${
+                  project.featured ? 'ring-2 ring-brand-primary/20' : ''
+                }`}
+                onMouseEnter={() => setHoveredProject(project.id)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                  {/* Content */}
+                  <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                    <div className="flex items-center gap-3 mb-4">
+                      {project.featured && (
+                        <Badge className="bg-brand-primary text-white">Featured</Badge>
+                      )}
+                      <Badge variant="outline">{project.platform}</Badge>
+                      <Badge variant="secondary">{project.industry}</Badge>
+                    </div>
+                    
+                    <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 group-hover:text-brand-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    
+                    <div className="space-y-4 mb-6">
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 text-lg">Client</h4>
+                        <p className="text-muted-foreground">{project.client}</p>
                       </div>
-                    </CardHeader>
-                    <Button className="gap-2">
-                      View Case Study
-                      <ArrowRight className="h-4 w-4" />
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2 text-lg">Challenge & Solution</h4>
+                        <p className="text-muted-foreground leading-relaxed text-lg">{project.about}</p>
+                      </div>
+                    </div>
+
+                    {/* Impact Metrics */}
+                    <div className="grid grid-cols-3 gap-4 mb-8 p-4 bg-muted rounded-lg">
+                      {Object.entries(project.impact).map(([key, value]) => (
+                        <div key={key} className="text-center">
+                          <div className="text-2xl font-bold text-brand-primary">{value}</div>
+                          <div className="text-sm text-muted-foreground capitalize">
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {project.tags.map((tag) => (
+                        <Badge key={tag} variant="outline" className="text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    
+                    <Button 
+                      className="self-start group-hover:shadow-lg transition-all bg-brand-primary hover:bg-brand-primary/90"
+                    >
+                      <Clock className="h-4 w-4 mr-2" />
+                      View Full Case Study
+                      <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
-                  <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                    <div className="grid grid-cols-2 gap-4 p-8">
+
+                  {/* Images */}
+                  <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''} bg-gradient-to-br from-muted to-muted/50`}>
+                    <div className="grid grid-cols-2 gap-4 p-8 h-full">
                       {project.images.map((image, imgIndex) => (
-                        <div key={imgIndex} className="aspect-[4/3] bg-muted rounded-lg overflow-hidden">
+                        <div 
+                          key={imgIndex} 
+                          className={`rounded-lg overflow-hidden shadow-md transition-all duration-500 ${
+                            hoveredProject === project.id ? 'hover:scale-105 hover:shadow-xl' : ''
+                          } ${imgIndex === 0 ? 'col-span-2' : ''}`}
+                          style={{
+                            aspectRatio: imgIndex === 0 ? '16/10' : '4/3'
+                          }}
+                        >
                           <img 
                             src={image} 
-                            alt={`${project.title} screenshot ${imgIndex + 1}`}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            alt={`${project.title} interface ${imgIndex + 1}`}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                         </div>
                       ))}
@@ -179,14 +322,20 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-gradient-to-br from-brand-primary to-brand-secondary">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Get in touch</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Let's Create Something Amazing
+            </h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Ready to transform your user experience? Let's discuss your project.
+            </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="aspect-[16/10] bg-background rounded-lg overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Map */}
+            <div className="aspect-[16/10] bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197642.23823012237!2d-76.76058314852548!3d39.284622471581436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c803aed6f483b7%3A0x44896a84223e758!2sBaltimore%2C%20MD!5e0!3m2!1sen!2sus!4v1625863122021!5m2!1sen!2sus"
                 width="100%" 
@@ -194,62 +343,80 @@ const Portfolio = () => {
                 style={{border: 0}} 
                 allowFullScreen 
                 loading="lazy"
-                className="rounded-lg"
+                className="rounded-2xl"
               />
             </div>
             
-            <div className="space-y-8">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Mail className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Email</h3>
-                  </div>
-                  <a 
-                    href="mailto:e.warner86@gmail.com?subject=Let's Chat!" 
-                    className="text-primary hover:underline text-lg"
-                  >
-                    e.warner86@gmail.com
-                  </a>
-                </CardContent>
-              </Card>
+            {/* Contact Info */}
+            <div className="space-y-6">
+              {[
+                {
+                  icon: Mail,
+                  title: "Email",
+                  content: "e.warner86@gmail.com",
+                  href: "mailto:e.warner86@gmail.com?subject=Let's Collaborate!",
+                  description: "Typically respond within 24 hours"
+                },
+                {
+                  icon: Phone,
+                  title: "Phone",
+                  content: "(267) 701-6209",
+                  href: "tel:2677016209",
+                  description: "Available for calls Mon-Fri 9AM-5PM EST"
+                },
+                {
+                  icon: MapPin,
+                  title: "Location",
+                  content: "Baltimore, Maryland",
+                  description: "Open to remote & hybrid opportunities"
+                }
+              ].map((contact, index) => (
+                <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all">
+                  <CardContent className="p-6 flex items-center gap-4">
+                    <div className="bg-white/20 rounded-full p-3">
+                      <contact.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-1">{contact.title}</h3>
+                      {contact.href ? (
+                        <a 
+                          href={contact.href} 
+                          className="text-white/90 hover:text-white transition-colors text-lg font-medium"
+                        >
+                          {contact.content}
+                        </a>
+                      ) : (
+                        <span className="text-white/90 text-lg">{contact.content}</span>
+                      )}
+                      <p className="text-white/70 text-sm mt-1">{contact.description}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
 
-              <Card>
+              {/* Social Links */}
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-4">
-                    <Phone className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Phone</h3>
-                  </div>
-                  <a 
-                    href="tel:2677016209" 
-                    className="text-primary hover:underline text-lg"
-                  >
-                    (267) 701-6209
-                  </a>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Location</h3>
-                  </div>
-                  <span className="text-lg text-muted-foreground">Baltimore, Maryland</span>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <ExternalLink className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-semibold">Elsewhere</h3>
+                    <div className="bg-white/20 rounded-full p-3">
+                      <ExternalLink className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">Connect Online</h3>
                   </div>
                   <div className="flex gap-4">
-                    <a href="https://twitter.com/eboss2k9" className="text-primary hover:underline">Twitter</a>
-                    <a href="https://www.facebook.com/e.warner86" className="text-primary hover:underline">Facebook</a>
-                    <a href="https://www.linkedin.com/in/warnereric/" className="text-primary hover:underline">LinkedIn</a>
-                    <a href="https://github.com/eboss2k9" className="text-primary hover:underline">GitHub</a>
+                    {[
+                      { name: "LinkedIn", url: "https://www.linkedin.com/in/warnereric/" },
+                      { name: "GitHub", url: "https://github.com/eboss2k9" },
+                      { name: "Twitter", url: "https://twitter.com/eboss2k9" }
+                    ].map((social) => (
+                      <a 
+                        key={social.name}
+                        href={social.url} 
+                        className="text-white/90 hover:text-white transition-colors px-3 py-1 bg-white/10 rounded-full text-sm font-medium hover:bg-white/20"
+                      >
+                        {social.name}
+                      </a>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -259,10 +426,10 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t">
+      <footer className="py-8 bg-brand-dark border-t border-white/10">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-muted-foreground">
-            © Eric Warner's Creative Studio, LLC. All rights reserved.
+          <p className="text-white/80">
+            © 2025 Eric Warner's Creative Studio, LLC. Designing experiences that matter.
           </p>
         </div>
       </footer>

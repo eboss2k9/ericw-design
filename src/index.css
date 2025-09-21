@@ -8,48 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Grayscale Luxury Design System */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 8%;
+    /* Modern UX Designer Brand System */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 0 0% 8%;
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 210 50% 15%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 197 71% 73%;
+    --accent-foreground: 240 5.9% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 8%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
 
-    /* Custom luxury tokens */
-    --luxury-dark: 0 0% 5%;
-    --luxury-medium: 0 0% 25%;
-    --luxury-light: 0 0% 85%;
-    --luxury-accent: 210 50% 15%;
+    /* UX Design Brand Colors */
+    --brand-primary: 262 83% 58%;
+    --brand-secondary: 197 71% 73%;
+    --brand-accent: 45 93% 47%;
+    --brand-success: 142 71% 45%;
+    --brand-dark: 240 10% 3.9%;
+    --brand-light: 0 0% 98%;
     
-    /* Gradients */
-    --gradient-luxury: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 15%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 0% 94%));
+    /* Modern Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%), hsl(197 71% 73%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(240 4.8% 95.9%));
+    --gradient-accent: linear-gradient(135deg, hsl(197 71% 73%), hsl(45 93% 47%));
     
-    /* Shadows */
-    --shadow-luxury: 0 25px 50px -12px hsl(0 0% 8% / 0.15);
-    --shadow-card: 0 4px 6px -1px hsl(0 0% 8% / 0.1);
+    /* Modern Shadows */
+    --shadow-glow: 0 20px 25px -5px hsl(262 83% 58% / 0.1), 0 10px 10px -5px hsl(262 83% 58% / 0.04);
+    --shadow-card: 0 4px 6px -1px hsl(240 10% 3.9% / 0.1), 0 2px 4px -1px hsl(240 10% 3.9% / 0.06);
+    --shadow-button: 0 10px 15px -3px hsl(262 83% 58% / 0.1), 0 4px 6px -2px hsl(262 83% 58% / 0.05);
 
     --radius: 0.5rem;
 
