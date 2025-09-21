@@ -19,6 +19,9 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import cjamsNarrative from "@/assets/cjams_narrative.jpg";
+import cjamsCertificate from "@/assets/cjams_certificate.jpg";
+import cjamsDashboard from "@/assets/cjams_dashboard.jpg";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -100,7 +103,7 @@ const Portfolio = () => {
       about: "Complete redesign of critical government services affecting thousands of families. Streamlined complex workflows resulting in 50% reduction in processing time.",
       platform: "Web Application",
       industry: "Government & Public Service",
-      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+      images: [cjamsDashboard, cjamsNarrative, cjamsCertificate],
       impact: {
         efficiency: "50%",
         userSatisfaction: "89%",

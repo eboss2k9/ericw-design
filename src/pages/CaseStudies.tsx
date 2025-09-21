@@ -21,6 +21,9 @@ import polyplexusHeader from "@/assets/polyplexus_header_design.png";
 import styletrailHeader from "@/assets/styletrail_header_design.png";
 import underaHeader from "@/assets/undera_header_design.png";
 import workbenchHeader from "@/assets/workbench_header_design.png";
+import cjamsNarrative from "@/assets/cjams_narrative.jpg";
+import cjamsCertificate from "@/assets/cjams_certificate.jpg";
+import cjamsDashboard from "@/assets/cjams_dashboard.jpg";
 
 const CaseStudies = () => {
   const { id } = useParams();
@@ -384,7 +387,7 @@ const CaseStudies = () => {
         role: "Director of IT Services, Maryland DHS"
       },
       tags: ["Government UX", "Accessibility", "Service Design", "Workflow Optimization"],
-      images: [cjamsHeader, "/placeholder.svg", "/placeholder.svg"]
+      images: [cjamsHeader, cjamsDashboard, cjamsNarrative, cjamsCertificate]
     }
   };
 
