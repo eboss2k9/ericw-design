@@ -192,9 +192,12 @@ const Portfolio = () => {
                   variant="outline" 
                   size="lg" 
                   className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white w-full sm:w-auto"
+                  asChild
                 >
-                  View Case Studies
-                  <ArrowRight className="h-4 w-4 ml-2" />
+                  <Link to="/case-studies">
+                    View Case Studies
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
                 </Button>
               </div>
             </div>
