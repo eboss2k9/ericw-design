@@ -46,7 +46,7 @@ const Media = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-luxury-dark text-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-solid-accent text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Media Coverage
@@ -64,7 +64,7 @@ const Media = () => {
             {mediaFeatures.map((feature, index) => (
               <Card key={index} className="group hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-luxury-dark mb-3 group-hover:text-luxury-accent transition-colors text-lg">
+                  <h3 className="font-semibold text-solid-accent mb-3 group-hover:text-solid-hero transition-colors text-lg">
                     {feature.title}
                   </h3>
                   <p className="text-muted-foreground mb-4 leading-relaxed">
