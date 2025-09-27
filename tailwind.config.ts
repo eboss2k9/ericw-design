@@ -54,6 +54,11 @@ export default {
           dark: "hsl(var(--brand-dark))",           /* #222222 */
           light: "hsl(var(--brand-light))",         /* #ffffff */
         },
+        solid: {
+          hero: "hsl(var(--solid-hero))",         /* Teal */
+          card: "hsl(var(--solid-card))",         /* White */
+          accent: "hsl(var(--solid-accent))",     /* Black */
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

@@ -44,10 +44,10 @@ All colors MUST be HSL.
     --brand-dark: 0 0% 13%;        /* #222222 */
     --brand-light: 0 0% 100%;      /* #ffffff */
     
-    /* Brand Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(188 79% 47%), hsl(188 79% 35%));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 96%));
-    --gradient-accent: linear-gradient(135deg, hsl(188 79% 47%), hsl(188 79% 60%));
+    /* Solid Brand Colors (no gradients) */
+    --solid-hero: 188 79% 47%;     /* Teal */
+    --solid-card: 0 0% 100%;       /* White */
+    --solid-accent: 0 0% 13%;      /* Black */
     
     /* Modern Shadows */
     --shadow-glow: 0 20px 25px -5px hsl(188 79% 47% / 0.15), 0 10px 10px -5px hsl(188 79% 47% / 0.1);
