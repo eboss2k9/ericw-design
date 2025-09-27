@@ -293,6 +293,134 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Media Coverage Section */}
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-luxury-dark mb-4">
+              Media Coverage
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
+              Featured across leading publications and recognized for innovation in business and technology.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-luxury-dark mb-2 group-hover:text-luxury-accent transition-colors">
+                  Baltimore Magazine
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  35 of Baltimore's most unstoppable beauty products and professionals
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="https://www.baltimoremagazine.com/section/styleshopping/best-baltimore-beauty-products-salons-spas/" target="_blank" rel="noopener noreferrer">
+                    Read Article
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-luxury-dark mb-2 group-hover:text-luxury-accent transition-colors">
+                  Technical.ly Baltimore
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Baltipreneurs accelerator and creative tech innovation
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="https://technical.ly/baltimore/2019/11/13/loyola-first-baltipreneurs-accelerator-cohort/" target="_blank" rel="noopener noreferrer">
+                    Read Article
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-luxury-dark mb-2 group-hover:text-luxury-accent transition-colors">
+                  Technical.ly Delaware
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Pivot creative tech startup app innovation
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="https://technical.ly/delaware/2019/04/18/pivot-creative-tech-styletrail-startup-app-destiny-gordon/" target="_blank" rel="noopener noreferrer">
+                    Read Article
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-luxury-dark mb-2 group-hover:text-luxury-accent transition-colors">
+                  Authority Magazine
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Leadership interview on avoiding micromanaging for company success
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="https://medium.com/authority-magazine/how-avoiding-micromanaging-can-help-your-company-thrive-6d7ee8206774" target="_blank" rel="noopener noreferrer">
+                    Read Interview
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-luxury-dark mb-2 group-hover:text-luxury-accent transition-colors">
+                  Black Enterprise
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Featured quotes for inspiration and motivation
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="https://www.blackenterprise.com/32-quotes-to-get-inspired/" target="_blank" rel="noopener noreferrer">
+                    Read Feature
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-luxury-dark mb-2 group-hover:text-luxury-accent transition-colors">
+                  Black News
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Black entrepreneur launches new beauty app innovation
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="https://www.google.com/amp/www.blacknews.com/news/black-entrepreneur-launches-new-beauty-app-that-allows-you-to-live-like-a-celebrity-stylist/amp/" target="_blank" rel="noopener noreferrer">
+                    Read Article
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="group hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-luxury-dark mb-2 group-hover:text-luxury-accent transition-colors">
+                  Thrive Global
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Interview on leadership and company culture transformation
+                </p>
+                <Button variant="outline" size="sm" asChild>
+                  <a href="https://thriveglobal.com/stories/how-avoiding-micromanaging-can-help-your-company-thrive/" target="_blank" rel="noopener noreferrer">
+                    Read Interview
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-luxury-dark text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
