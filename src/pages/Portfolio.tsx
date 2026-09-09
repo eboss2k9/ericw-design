@@ -146,21 +146,21 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
+    <div className="min-h-screen overflow-x-clip bg-background">
       <Navigation />
       
       {/* Hero Section with EWCS Brand Colors */}
-      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-primary to-brand-secondary">
+      <section className="relative flex min-h-[calc(100svh-4rem)] items-center px-4 py-10 sm:px-6 sm:py-14 lg:min-h-screen lg:px-8 lg:py-20 bg-gradient-to-br from-brand-primary to-brand-secondary">
         <div className="absolute inset-0 bg-brand-secondary/30"></div>
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+          <div className="grid gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div className="animate-slide-up">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+              <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-2 backdrop-blur-sm sm:px-4 mb-5 sm:mb-6">
                 <Sparkles className="h-4 w-4 text-white" />
                 <span className="text-white text-sm font-medium">Available for New Projects</span>
               </div>
               
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight break-words">
                 UX that 
                 <span className="bg-gradient-to-r from-brand-primary to-white bg-clip-text text-transparent">
                   {" "}drives results
@@ -171,7 +171,7 @@ const Portfolio = () => {
                 17 years crafting user experiences that don't just look good — they deliver measurable business impact.
               </h2>
               
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-10">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-3 gap-y-5 sm:gap-4 mb-8 sm:mb-10">
                 {impactStats.map((stat, index) => (
                   <div key={index} className="text-center animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                     <stat.icon className="h-6 w-6 text-brand-primary mx-auto mb-2" />
@@ -203,7 +203,7 @@ const Portfolio = () => {
             </div>
             
             <div className="relative animate-float">
-              <div className="aspect-square bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border border-white/20">
+              <div className="mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-lg border border-white/20 bg-white/10 shadow-2xl backdrop-blur-sm sm:aspect-square">
                 <img 
                   src={ericWarnerHero} 
                   alt="Eric D. Warner - UX Design Leader" 
@@ -280,7 +280,7 @@ const Portfolio = () => {
                 <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                   {/* Content */}
                   <div className={`p-6 sm:p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <div className="flex items-center gap-3 mb-4">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
                       {project.featured && (
                         <Badge className="bg-brand-primary text-white">Featured</Badge>
                       )}
@@ -324,9 +324,9 @@ const Portfolio = () => {
                       ))}
                     </div>
                     
-                    <Link to={`/case-studies/${project.id}`}>
+                    <Link to={`/case-studies/${project.id}`} className="block sm:w-fit">
                       <Button 
-                        className="self-start group-hover:shadow-lg transition-all"
+                        className="w-full self-start transition-all group-hover:shadow-lg sm:w-auto"
                       >
                         <Clock className="h-4 w-4 mr-2" />
                         View Full Case Study
@@ -402,16 +402,16 @@ const Portfolio = () => {
                 }
               ].map((contact, index) => (
                 <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all">
-                  <CardContent className="p-6 flex items-center gap-4">
+                  <CardContent className="flex items-start gap-4 p-5 sm:items-center sm:p-6">
                     <div className="bg-white/20 rounded-full p-3">
                       <contact.icon className="h-6 w-6 text-white" />
                     </div>
-                    <div className="flex-1">
+                    <div className="min-w-0 flex-1">
                       <h3 className="text-lg font-semibold text-white mb-1">{contact.title}</h3>
                       {contact.href ? (
                         <a 
                           href={contact.href} 
-                          className="text-white/90 hover:text-white transition-colors text-lg font-medium"
+                          className="break-all text-base font-medium text-white/90 transition-colors hover:text-white sm:text-lg"
                         >
                           {contact.content}
                         </a>
@@ -433,7 +433,7 @@ const Portfolio = () => {
                     </div>
                     <h3 className="text-lg font-semibold text-white">Connect Online</h3>
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-2 sm:gap-4">
                     {[
                       { name: "LinkedIn", url: "https://www.linkedin.com/in/warnereric/" },
                       { name: "GitHub", url: "https://github.com/eboss2k9" },
