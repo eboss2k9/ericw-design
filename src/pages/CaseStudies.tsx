@@ -564,7 +564,7 @@ const CaseStudies = () => {
       <Navigation />
       
       {/* Breadcrumb */}
-      <section className="py-6 px-4 border-b">
+      <section className="border-b px-4 py-4 sm:py-6">
         <div className="container mx-auto max-w-6xl">
           <Link to="/case-studies" className="inline-flex items-center text-brand-primary hover:text-brand-primary/80 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -574,21 +574,21 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Study Header */}
-      <section className="py-16 px-4 bg-gradient-to-r from-background to-muted">
+      <section className="bg-gradient-to-r from-background to-muted px-4 py-10 sm:py-16">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid gap-8 items-center lg:grid-cols-2 lg:gap-12">
             <div>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-5 sm:mb-6">
                 <Badge variant="outline">{currentStudy.client}</Badge>
                 <Badge variant="secondary">{currentStudy.duration}</Badge>
                 <Badge className="bg-brand-primary text-white">{currentStudy.role}</Badge>
               </div>
               
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h1 className="break-words text-3xl font-bold text-foreground mb-6 sm:text-4xl md:text-5xl">
                 {currentStudy.title}
               </h1>
               
-              <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-8">
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">Duration</h3>
                   <p className="text-muted-foreground">{currentStudy.duration}</p>
@@ -620,9 +620,9 @@ const CaseStudies = () => {
       </section>
 
       {/* Challenge & Solution */}
-      <section className="py-16 px-4">
+      <section className="px-4 py-10 sm:py-16">
         <div className="container mx-auto max-w-4xl">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-12">
             <Card>
               <CardHeader>
                 <h2 className="text-2xl font-bold text-foreground flex items-center gap-3">
@@ -655,13 +655,13 @@ const CaseStudies = () => {
       </section>
 
       {/* Design Process */}
-      <section className="py-16 px-4 bg-muted">
+      <section className="bg-muted px-4 py-10 sm:py-16">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-12">
+          <h2 className="mb-8 text-center text-2xl font-bold text-foreground sm:mb-12 sm:text-3xl">
             Design Process
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-8">
             {currentStudy.process.map((phase, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all">
                 <CardContent className="p-6">
@@ -689,9 +689,9 @@ const CaseStudies = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-16 px-4">
+      <section className="px-4 py-10 sm:py-16">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-12">
+          <h2 className="mb-8 text-center text-2xl font-bold text-foreground sm:mb-12 sm:text-3xl">
             Key Features Delivered
           </h2>
           
