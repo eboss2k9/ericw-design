@@ -117,11 +117,11 @@ const Portfolio = () => {
     {
       id: "aew-vending",
       title: "AEW Vending Solutions Platform",
-      client: "AEW Vending",
-      about: "Modernized vending solutions platform for Twin Cities workplaces, featuring smart inventory management and contactless payment systems. Increased workplace satisfaction by 85%.",
+      client: "AEW Vending — Wayzata, MN",
+      about: "Premium vending for Twin Cities workplaces: the Stockwell 2.0 smart cabinet, PicoCooler Vision smart cooler and traditional combo machines, plus a browsable product catalog and full-service stocking, payments and maintenance.",
       platform: "Web Application & Mobile",
-      industry: "Workplace Solutions & IoT",
-      images: [aewVendingInterface, aewWorkplaceSetup],
+      industry: "Workplace Solutions & Smart Vending",
+      images: [aewTwinCitiesMap, aewStockwell, aewPicoCooler, aewTraditional],
       impact: {
         satisfaction: "85%",
         efficiency: "72%",
