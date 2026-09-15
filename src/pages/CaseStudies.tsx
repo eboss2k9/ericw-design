@@ -471,12 +471,12 @@ const CaseStudies = () => {
         { metric: "Client Revenue", before: "$280K/yr", after: "$850K/yr", improvement: "+204%" }
       ],
       testimonial: {
-        quote: "Eric's design thinking transformed our traditional vending business into a modern workplace solution. The employee engagement and operational insights we now have are game-changing.",
-        author: "Mark Peterson",
-        role: "CEO, AEW Vending"
+        quote: "We don't just provide vending machines — we offer a complete management solution that takes the hassle out of providing refreshments and essentials to your team.",
+        author: "AEW Vending",
+        role: "Wayzata, MN — aewvending.com"
       },
-      tags: ["Workplace UX", "IoT Integration", "Mobile Design", "Analytics"],
-      images: [aewHeaderDesign, aewVendingInterface, aewWorkplaceSetup]
+      tags: ["Workplace UX", "Smart Vending", "Catalog Design", "Lead Generation"],
+      images: [aewTwinCitiesMap, aewStockwell, aewPicoCooler, aewTraditional]
     }
   };
 
