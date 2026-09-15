@@ -36,8 +36,10 @@ import workbenchHomepage from "@/assets/workbench_homepage.jpg";
 import workbenchPartners from "@/assets/workbench_partners.jpg";
 import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
 import ericWarnerHero from "@/assets/eric_warner_hero.jpg";
-import aewVendingInterface from "@/assets/aew_vending_interface.jpg";
-import aewWorkplaceSetup from "@/assets/aew_workplace_setup.jpg";
+import aewTwinCitiesMap from "@/assets/aew_twin_cities_map.png";
+import aewStockwell from "@/assets/aew_stockwell.png";
+import aewPicoCooler from "@/assets/aew_picocooler.png";
+import aewTraditional from "@/assets/aew_traditional.png";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
@@ -115,11 +117,11 @@ const Portfolio = () => {
     {
       id: "aew-vending",
       title: "AEW Vending Solutions Platform",
-      client: "AEW Vending",
-      about: "Modernized vending solutions platform for Twin Cities workplaces, featuring smart inventory management and contactless payment systems. Increased workplace satisfaction by 85%.",
+      client: "AEW Vending — Wayzata, MN",
+      about: "Premium vending for Twin Cities workplaces: the Stockwell 2.0 smart cabinet, PicoCooler Vision smart cooler and traditional combo machines, plus a browsable product catalog and full-service stocking, payments and maintenance.",
       platform: "Web Application & Mobile",
-      industry: "Workplace Solutions & IoT",
-      images: [aewVendingInterface, aewWorkplaceSetup],
+      industry: "Workplace Solutions & Smart Vending",
+      images: [aewTwinCitiesMap, aewStockwell, aewPicoCooler, aewTraditional],
       impact: {
         satisfaction: "85%",
         efficiency: "72%",

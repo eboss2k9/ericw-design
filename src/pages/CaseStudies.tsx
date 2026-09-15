@@ -40,6 +40,10 @@ import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
 import aewHeaderDesign from "@/assets/aew_header_design.png";
 import aewVendingInterface from "@/assets/aew_vending_interface.jpg";
 import aewWorkplaceSetup from "@/assets/aew_workplace_setup.jpg";
+import aewTwinCitiesMap from "@/assets/aew_twin_cities_map.png";
+import aewStockwell from "@/assets/aew_stockwell.png";
+import aewPicoCooler from "@/assets/aew_picocooler.png";
+import aewTraditional from "@/assets/aew_traditional.png";
 
 const CaseStudies = () => {
   const { id } = useParams();
@@ -411,8 +415,8 @@ const CaseStudies = () => {
       duration: "9 months",
       team: "4 designers, 5 developers, 2 IoT specialists",
       role: "Lead UX Designer & Product Strategy",
-      challenge: "AEW Vending needed to modernize their workplace vending solutions to compete in the smart office market. Traditional vending machines lacked user engagement, inventory visibility, and modern payment options, resulting in low utilization and customer dissatisfaction.",
-      solution: "Designed a comprehensive smart vending ecosystem that transforms workplace refreshment experiences. Created intuitive interfaces for both customers and facility managers, integrating IoT technology with user-centered design to boost engagement and operational efficiency.",
+      challenge: "AEW Vending serves Twin Cities workplaces with premium vending solutions, but its offering was hard to compare online. Buyers could not easily tell the Stockwell 2.0 smart cabinet, the PicoCooler Vision smart cooler, and traditional combo machines apart, or understand that AEW handles custom stocking, payments, maintenance and restocking as a full-service program.",
+      solution: "Built a clear, conversion-focused experience around three machine types and a browsable product catalog (energy drinks, soft drinks, snacks and more). Every section leads to a single action — \"Get Your Custom Vending Solution!\" — with the full-service story (custom stocking, flexible payment options, regular maintenance and restocking), the company story, and Wayzata location and hours easy to find.",
       process: [
         {
           phase: "Workplace Research",
@@ -456,11 +460,12 @@ const CaseStudies = () => {
         }
       ],
       keyFeatures: [
-        "Smart inventory management with real-time tracking",
-        "Contactless payment via mobile app and NFC",
-        "Personalized product recommendations",
-        "Facility management dashboard with analytics",
-        "Employee wellness program integration"
+        "Stockwell 2.0 smart cabinet: customizable product selection, contactless payment, real-time inventory tracking",
+        "PicoCooler Vision smart cooler: temperature-controlled storage, energy-efficient operation, healthy and indulgent options",
+        "Traditional combo machines: space-saving design, customizable layout, advanced payment systems",
+        "Product catalog preview by category — energy drinks, soft drinks, snacks and more",
+        "Full-service management: custom stocking, flexible payment options, regular maintenance and restocking",
+        "Twin Cities service map, Wayzata location, contact details and business hours"
       ],
       results: [
         { metric: "Employee Satisfaction", before: "2.8/5", after: "4.6/5", improvement: "+64%" },
@@ -470,12 +475,12 @@ const CaseStudies = () => {
         { metric: "Client Revenue", before: "$280K/yr", after: "$850K/yr", improvement: "+204%" }
       ],
       testimonial: {
-        quote: "Eric's design thinking transformed our traditional vending business into a modern workplace solution. The employee engagement and operational insights we now have are game-changing.",
-        author: "Mark Peterson",
-        role: "CEO, AEW Vending"
+        quote: "We don't just provide vending machines — we offer a complete management solution that takes the hassle out of providing refreshments and essentials to your team.",
+        author: "AEW Vending",
+        role: "Wayzata, MN — aewvending.com"
       },
-      tags: ["Workplace UX", "IoT Integration", "Mobile Design", "Analytics"],
-      images: [aewHeaderDesign, aewVendingInterface, aewWorkplaceSetup]
+      tags: ["Workplace UX", "Smart Vending", "Catalog Design", "Lead Generation"],
+      images: [aewTwinCitiesMap, aewStockwell, aewPicoCooler, aewTraditional]
     }
   };
 
