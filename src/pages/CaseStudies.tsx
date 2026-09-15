@@ -40,6 +40,10 @@ import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
 import aewHeaderDesign from "@/assets/aew_header_design.png";
 import aewVendingInterface from "@/assets/aew_vending_interface.jpg";
 import aewWorkplaceSetup from "@/assets/aew_workplace_setup.jpg";
+import aewTwinCitiesMap from "@/assets/aew_twin_cities_map.png";
+import aewStockwell from "@/assets/aew_stockwell.png";
+import aewPicoCooler from "@/assets/aew_picocooler.png";
+import aewTraditional from "@/assets/aew_traditional.png";
 
 const CaseStudies = () => {
   const { id } = useParams();
