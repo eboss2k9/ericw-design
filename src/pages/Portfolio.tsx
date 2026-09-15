@@ -36,8 +36,10 @@ import workbenchHomepage from "@/assets/workbench_homepage.jpg";
 import workbenchPartners from "@/assets/workbench_partners.jpg";
 import workbenchWhatWeDo from "@/assets/workbench_whatwedo.jpg";
 import ericWarnerHero from "@/assets/eric_warner_hero.jpg";
-import aewVendingInterface from "@/assets/aew_vending_interface.jpg";
-import aewWorkplaceSetup from "@/assets/aew_workplace_setup.jpg";
+import aewTwinCitiesMap from "@/assets/aew_twin_cities_map.png";
+import aewStockwell from "@/assets/aew_stockwell.png";
+import aewPicoCooler from "@/assets/aew_picocooler.png";
+import aewTraditional from "@/assets/aew_traditional.png";
 
 const Portfolio = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
