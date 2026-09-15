@@ -456,11 +456,12 @@ const CaseStudies = () => {
         }
       ],
       keyFeatures: [
-        "Smart inventory management with real-time tracking",
-        "Contactless payment via mobile app and NFC",
-        "Personalized product recommendations",
-        "Facility management dashboard with analytics",
-        "Employee wellness program integration"
+        "Stockwell 2.0 smart cabinet: customizable product selection, contactless payment, real-time inventory tracking",
+        "PicoCooler Vision smart cooler: temperature-controlled storage, energy-efficient operation, healthy and indulgent options",
+        "Traditional combo machines: space-saving design, customizable layout, advanced payment systems",
+        "Product catalog preview by category — energy drinks, soft drinks, snacks and more",
+        "Full-service management: custom stocking, flexible payment options, regular maintenance and restocking",
+        "Twin Cities service map, Wayzata location, contact details and business hours"
       ],
       results: [
         { metric: "Employee Satisfaction", before: "2.8/5", after: "4.6/5", improvement: "+64%" },
